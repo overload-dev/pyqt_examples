@@ -21,8 +21,8 @@ class MainWindow(QMainWindow):
 
         self.glWidget = GLWidget(self)
         self.initGUI()
-        # self.setCentralWidget(glWidget)
-
+        
+        # 렌더링 주기 설정
         timer = QtCore.QTimer(self)
         timer.setInterval(20)  # period, in milliseconds
         timer.timeout.connect(self.glWidget.updateGL)
